@@ -1,6 +1,6 @@
 # 📰 **Fake News Detection with Machine Learning**
 
-Welcome to the **Fake News Detection** project by **MufakirAnsari**! This repository contains an advanced machine learning solution to classify news articles as either **REAL** or **FAKE** using Python and cutting-edge techniques in natural language processing (NLP) and machine learning.
+Welcome to the **Fake News Detection** project! This repository contains an advanced machine learning solution to classify news articles as either **REAL** or **FAKE** using Python and cutting-edge techniques in natural language processing (NLP) and machine learning.
 
 In today's world, where misinformation spreads rapidly through social media and online platforms, detecting fake news has become crucial. This project aims to empower users to distinguish between real and fake news by leveraging the power of machine learning.
 
@@ -54,38 +54,6 @@ The project uses the **Fake News Dataset**, which contains labeled news articles
 ## 📊 **What You’ll See**
 
 When you run the script, you’ll get:
-1. **Model Accuracy**: The overall accuracy of the model on the test set is **93.45%**.
-2. **Classification Report**:
-   ```
-              precision    recall  f1-score   support
-        FAKE       0.95      0.92      0.93       638
-        REAL       0.92      0.95      0.93       629
-    accuracy                           0.93      1267
-   macro avg       0.93      0.93      0.93      1267
-weighted avg       0.93      0.93      0.93      1267
-   ```
-3. **Confusion Matrix**:
-   ```
-   [[588  50]
-    [ 33 596]]
-   ```
-   - **True Positives (REAL)**: 596
-   - **True Negatives (FAKE)**: 588
-   - **False Positives**: 50
-   - **False Negatives**: 33
-
-4. **Number of Misclassified Examples**: 83
-5. **ROC-AUC Curve**: Evaluates the trade-off between true positive rate and false positive rate.
-6. **Precision-Recall Curve**: Focuses on the model’s performance for imbalanced classes.
-7. **Learning Curves**: Visualizes how the model learns over time.
-8. **Word Clouds**: Highlights the most frequent words in real and fake news.
-9. **Feature Importance**: Bar chart showing the top 20 most important words.
-
----
-
-## 🔍 **Example Output**
-
-Here’s a sneak peek at what the output looks like:
 
 ### **Accuracy**
 ```
@@ -93,13 +61,55 @@ Accuracy: 93.45%
 ```
 
 ### **Confusion Matrix**
-![Confusion Matrix](https://via.placeholder.com/500x300?text=Confusion+Matrix)
+![Confusion Matrix](images/confusion_matrix.png)
+
+This confusion matrix shows the performance of the model on the test set:
+- **True Positives (REAL)**: 596
+- **True Negatives (FAKE)**: 588
+- **False Positives**: 50
+- **False Negatives**: 33
+
+### **Classification Report**
+```
+              precision    recall  f1-score   support
+        FAKE       0.95      0.92      0.93       638
+        REAL       0.92      0.95      0.93       629
+    accuracy                           0.93      1267
+   macro avg       0.93      0.93      0.93      1267
+weighted avg       0.93      0.93      0.93      1267
+```
 
 ### **Word Clouds**
 - **Real News Word Cloud**:
-  ![Real News Word Cloud](https://via.placeholder.com/500x300?text=Real+News+Word+Cloud)
+  ![Real News Word Cloud](images/real_news_word_cloud.png)
+
 - **Fake News Word Cloud**:
-  ![Fake News Word Cloud](https://via.placeholder.com/500x300?text=Fake+News+Word+Cloud)
+  ![Fake News Word Cloud](images/fake_news_word_cloud.png)
+
+These word clouds highlight the most frequent words in real and fake news articles.
+
+### **Feature Importance**
+![Feature Importance](images/feature_importance.png)
+
+This bar chart shows the top 20 most important words that contribute to distinguishing real from fake news.
+
+### **ROC-AUC Curve**
+![ROC-AUC Curve](images/roc_auc_curve.png)
+
+The ROC-AUC curve evaluates the trade-off between the true positive rate and false positive rate.
+
+### **Precision-Recall Curve**
+![Precision-Recall Curve](images/precision_recall_curve.png)
+
+The precision-recall curve focuses on the model’s performance for imbalanced classes.
+
+---
+
+## 🔍 **Error Analysis**
+
+The model misclassified **83 examples** out of 1267. Here are some insights:
+- Misclassified examples often contain ambiguous or misleading phrases.
+- Error analysis helps identify areas where the model struggles, such as sarcasm or nuanced language.
 
 ---
 
@@ -139,3 +149,29 @@ This project is licensed under the **MIT License**. Feel free to use, modify, an
 Misinformation can have serious consequences, from influencing public opinion to spreading panic during crises. By building tools like this, we take a step toward combating fake news and promoting truth and transparency.
 
 If you find this project helpful, please give it a ⭐️ and share it with others!
+
+---
+
+### **Folder Structure**
+```
+fake-news-detection/
+├── fakenews.py               # Main Python script
+├── news.csv                  # Dataset
+├── README.md                 # This file
+└── images/                   # Folder containing visualization images
+    ├── confusion_matrix.png
+    ├── real_news_word_cloud.png
+    ├── fake_news_word_cloud.png
+    ├── feature_importance.png
+    ├── roc_auc_curve.png
+    └── precision_recall_curve.png
+```
+
+---
+
+### **How to Add Images**
+1. Run the Python script (`fakenews.py`) to generate the plots and save them in the `images/` folder.
+2. Upload the `images/` folder to your GitHub repository.
+3. Ensure the image paths in the `README.md` match the uploaded image paths.
+
+Now your `README.md` will display all the plots and visualizations beautifully!
