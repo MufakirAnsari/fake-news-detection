@@ -30,6 +30,18 @@ Before running the project, ensure you have the following installed:
 - Python 3.7 or higher
 - Required libraries: `numpy`, `pandas`, `scikit-learn`, `matplotlib`, `seaborn`, `wordcloud`
 
+
+
 You can install the required libraries using:
 ```bash
 pip install numpy pandas scikit-learn matplotlib seaborn wordcloud
+
+##Dataset  
+
+The project uses the Fake News Dataset , which contains labeled news articles. You can download it here . Place the news.csv file in the same directory as the script. 
+Running the Code  
+
+Clone this repository:
+```bash
+git clone https://github.com/MufakirAnsari/fake-news-detection.git
+cd fake-news-detection
