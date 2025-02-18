@@ -80,11 +80,8 @@ weighted avg       0.93      0.93      0.93      1267
 ```
 
 ### **Word Clouds**
-- **Real News Word Cloud**:
-  ![Real News Word Cloud](images/real_news_word_cloud.png)
-
-- **Fake News Word Cloud**:
-  ![Fake News Word Cloud](images/fake_news_word_cloud.png)
+- **Real and Fake News Word Cloud**:
+  ![Real News Word Cloud](images/word_clouds.png)
 
 These word clouds highlight the most frequent words in real and fake news articles.
 
