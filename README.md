@@ -163,12 +163,3 @@ fake-news-detection/
     ├── roc_auc_curve.png
     └── precision_recall_curve.png
 ```
-
----
-
-### **How to Add Images**
-1. Run the Python script (`fakenews.py`) to generate the plots and save them in the `images/` folder.
-2. Upload the `images/` folder to your GitHub repository.
-3. Ensure the image paths in the `README.md` match the uploaded image paths.
-
-Now your `README.md` will display all the plots and visualizations beautifully!
